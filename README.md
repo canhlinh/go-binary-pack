@@ -1,9 +1,29 @@
 # Go BinaryPack
 
-[![Build Status](https://travis-ci.org/roman-kachanovsky/go-binary-pack.svg?branch=master)](https://travis-ci.org/roman-kachanovsky/go-binary-pack)
-[![GoDoc](https://godoc.org/github.com/roman-kachanovsky/go-binary-pack/binary-pack?status.svg)](http://godoc.org/github.com/roman-kachanovsky/go-binary-pack/binary-pack)
 
 BinaryPack is a simple Golang library which implements some functionality of Python's [struct](https://docs.python.org/2/library/struct.html) package.
+
+This one is forked from [BinaryPack](https://github.com/roman-kachanovsky/go-binary-pack) with more supported `pad byte` type
+
+**Format characters**
+
+Format characters (some characters like H have been reserved for future implementation of unsigned numbers):
+
+```
+    ? - bool, packed size 1 byte
+    b - int8, packed size 1 bytes
+    B - uint8, packed size 1 bytes
+    h - int16, packed size 2 bytes
+    H - uint16, packed size 2 bytes
+    i, l - int32, packed size 4 bytes
+    I, L - int32, packed size 4 bytes
+    q - int64, packed size 8 bytes
+    Q - uint64, packed size 8 bytes
+    f - float32, packed size 4 bytes
+    d - float64, packed size 8 bytes
+    Ns - string, packed size N bytes, N is a number of runes to pack/unpack
+```
+
 
 **Install**
 
